@@ -24,3 +24,14 @@ Route.get('sessions', 'SessionController.index')
 
 Route.post('forgot_password', 'ForgotPasswordController.store').validator('ForgotPassword')
 Route.put('forgot_password', 'ForgotPasswordController.update').validator('ResetPassword')
+
+Route.group(() => {
+  Route.get('types', 'TypeController.index')
+
+  Route.resource('/bets', 'BetController')
+    .apiOnly()
+    .validator(new Map([
+      [['bets.store'], ['Bet']]
+    ]))
+}).middleware(['auth'])
+

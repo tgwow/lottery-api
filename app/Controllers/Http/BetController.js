@@ -4,6 +4,8 @@
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
 /** @typedef {import('@adonisjs/framework/src/View')} View */
 
+const Bet = use('App/Models/Bet')
+
 /**
  * Resourceful controller for interacting with bets
  */
@@ -18,18 +20,9 @@ class BetController {
    * @param {View} ctx.view
    */
   async index ({ request, response, view }) {
-  }
+    const bets = await Bet.all()
 
-  /**
-   * Render a form to be used for creating a new bet.
-   * GET bets/create
-   *
-   * @param {object} ctx
-   * @param {Request} ctx.request
-   * @param {Response} ctx.response
-   * @param {View} ctx.view
-   */
-  async create ({ request, response, view }) {
+    return bets
   }
 
   /**
@@ -40,7 +33,25 @@ class BetController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async store ({ request, response }) {
+  async store ({ request, response, auth }) {
+    const { bets } = request.only(['bets'])
+    const id = auth.user.id
+
+    const betsArr = bets.map(bet => {
+      return {
+        ...bet,
+        user_id: id
+      }
+    })
+
+    try {
+      const result = await Bet.createMany(betsArr)
+
+      return result
+    } catch (err) {
+      console.log(err)
+      return response.status(err.status).send(err)
+    }
   }
 
   /**
@@ -53,18 +64,15 @@ class BetController {
    * @param {View} ctx.view
    */
   async show ({ params, request, response, view }) {
-  }
+    const id = params.id
 
-  /**
-   * Render a form to update an existing bet.
-   * GET bets/:id/edit
-   *
-   * @param {object} ctx
-   * @param {Request} ctx.request
-   * @param {Response} ctx.response
-   * @param {View} ctx.view
-   */
-  async edit ({ params, request, response, view }) {
+    const bets = await Bet
+      .query()
+      .where('user_id', id)
+      .with('user')
+      .fetch()
+
+    return bets
   }
 
   /**

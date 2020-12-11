@@ -2,7 +2,7 @@
 
 const BaseExceptionHandler = use('BaseExceptionHandler')
 const Env = use('Env')
-const Youch = use('youch')
+const Youch = require('youch')
 /**
  * This class handles all exceptions thrown during
  * the HTTP request lifecycle.
@@ -26,8 +26,8 @@ class ExceptionHandler extends BaseExceptionHandler {
       return response.status(error.status).send(error.messages)
     }
     if (Env.get('NODE_ENV') === 'development') {
-      const you = new Youch(error, request.request)
-      const errorJSON = await you.toJSON()
+      const youch = new Youch(error, request.request)
+      const errorJSON = await youch.toJSON()
       return response.status(error.status).send(errorJSON)
     }
 

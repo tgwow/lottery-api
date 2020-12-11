@@ -4,6 +4,8 @@
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
 /** @typedef {import('@adonisjs/framework/src/View')} View */
 
+const Type = use('App/Models/Type')
+
 /**
  * Resourceful controller for interacting with types
  */
@@ -18,6 +20,9 @@ class TypeController {
    * @param {View} ctx.view
    */
   async index ({ request, response, view }) {
+    const types = await Type.all()
+
+    return types
   }
 
   /**

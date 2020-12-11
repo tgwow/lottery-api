@@ -7,14 +7,14 @@ class TypeSchema extends Schema {
   up () {
     this.create('types', (table) => {
       table.increments()
-      table.string('type').notNullable()
-      table.text('description', ['varchar']).notNullable()
+      table.string('name').notNullable()
+      table.text('description').notNullable()
       table.integer('range').notNullable()
-      table.decimal('price', [2]).notNullable()
+      table.float('price', 2, 2).notNullable()
       table.integer('max_number').notNullable()
       table.string('color').notNullable()
       table.integer('min_cart_value').notNullable()
-      table.timestamps()
+      table.timestamps(true)
     })
   }
 

@@ -15,9 +15,9 @@
 const Factory = use('Factory')
 
 // eslint-disable-next-line camelcase
-Factory.blueprint('App/Models/Type', (faker, _, { type, description, range, price, max_number, color, min_cart_value }) => {
+Factory.blueprint('App/Models/Type', (faker, _, { name, description, range, price, max_number, color, min_cart_value }) => {
   return {
-    type,
+    name,
     description,
     range,
     price,

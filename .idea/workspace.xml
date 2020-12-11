@@ -5,22 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3baedea-c798-48ba-8a2a-1cb7cf150b4f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Token.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Token.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Traits/NoTimestamp.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Traits/NoTimestamp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bodyParser.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/bodyParser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Http/BetController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Http/BetController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Http/TypeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Http/TypeController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/cors.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/cors.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/factory.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/factory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/1503250034279_user.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/1503250034279_user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/1503250034280_token.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/1503250034280_token.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/start/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/start/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/start/kernel.js" beforeDir="false" afterPath="$PROJECT_DIR$/start/kernel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/1607693133285_type_schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/1607693133285_type_schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/TypeSeeder.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/TypeSeeder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/start/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/start/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +25,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app/Controllers/Http/UserController.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/app/Exceptions/Handler.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/start/routes.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/database/migrations/1607693133285_type_schema.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/database/migrations/1607694882354_bet_schema.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/app/Controllers/Http/BetController.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/database/migrations/1503250034280_token.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/app/Controllers/Http/ForgotPasswordController.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/app/Controllers/Http/TypeController.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/app/Controllers/Http/SessionController.js" root0="SKIP_INSPECTION" />
   </component>
   <component name="JsbtTreeLayoutManager">
@@ -106,7 +107,7 @@
       <workItem from="1607603829627" duration="5594000" />
       <workItem from="1607612299588" duration="1739000" />
       <workItem from="1607614123820" duration="13629000" />
-      <workItem from="1607692842114" duration="5457000" />
+      <workItem from="1607692842114" duration="22248000" />
     </task>
     <servers />
   </component>
