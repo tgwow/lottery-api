@@ -16,6 +16,11 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.get('/', () => {
-  return { greeting: 'Hello world in JSON' }
-})
+Route.post('users', 'UserController.store').validator('User')
+Route.get('users', 'UserController.index')
+
+Route.post('sessions', 'SessionController.store').validator('Session')
+Route.get('sessions', 'SessionController.index')
+
+Route.post('forgot_password', 'ForgotPasswordController.store').validator('ForgotPassword')
+Route.put('forgot_password', 'ForgotPasswordController.update').validator('ResetPassword')

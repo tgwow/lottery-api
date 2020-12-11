@@ -13,3 +13,6 @@ database/*.sqlite
 # Prettier config
 ./idea/prettier.xml
 ./idea/workspace.xml
+# Ignore artifacts:
+build
+coverage

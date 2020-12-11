@@ -12,10 +12,17 @@
 */
 
 /** @type {import('@adonisjs/lucid/src/Factory')} */
-// const Factory = use('Factory')
+const Factory = use('Factory')
 
-// Factory.blueprint('App/Models/User', (faker) => {
-//   return {
-//     username: faker.username()
-//   }
-// })
+// eslint-disable-next-line camelcase
+Factory.blueprint('App/Models/Type', (faker, _, { type, description, range, price, max_number, color, min_cart_value }) => {
+  return {
+    type,
+    description,
+    range,
+    price,
+    max_number,
+    color,
+    min_cart_value
+  }
+})
