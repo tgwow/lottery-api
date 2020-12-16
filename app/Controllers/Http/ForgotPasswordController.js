@@ -37,7 +37,7 @@ class ForgotPasswordController {
         return response.status(err.status).send({ error: { message: 'Email could not be sent, please, try again later.' } })
       }
     } catch (err) {
-      return response.status(err.status).send({ error: { message: 'This email not exists.', code: 'EMAIL_NOT_EXISTS' } })
+      return response.status(err.status).send({ error: { message: 'This email does not exists.', code: 'EMAIL_NOT_EXISTS' } })
     }
   }
 

@@ -11,8 +11,7 @@ tmp
 database/*.sqlite
 
 # Prettier config
-./idea/prettier.xml
-./idea/workspace.xml
+./idea/*
 # Ignore artifacts:
 build
 coverage

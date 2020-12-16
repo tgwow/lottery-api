@@ -5,7 +5,7 @@
 /** @typedef {import('@adonisjs/framework/src/View')} View */
 
 const Bet = use('App/Models/Bet')
-
+const Database = use('Database')
 /**
  * Resourceful controller for interacting with bets
  */
@@ -19,8 +19,11 @@ class BetController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async index ({ request, response, view }) {
-    const bets = await Bet.all()
+  async index ({ auth }) {
+    const id = auth.user.id
+    const bets = await Database.table('types')
+      .innerJoin('bets', 'types.id', 'bets.type_id')
+      .select('bets.id', 'numbers', 'name', 'price', 'bets.created_at as date', 'bets.user_id as user_id').where('user_id', id)
 
     return bets
   }
@@ -69,7 +72,7 @@ class BetController {
     const bets = await Bet
       .query()
       .where('user_id', id)
-      .with('user')
+      .with('type')
       .fetch()
 
     return bets

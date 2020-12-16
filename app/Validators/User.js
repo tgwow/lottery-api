@@ -4,12 +4,11 @@ const Antl = use('Antl')
 
 class User {
   get validateAll () {
-    return true
+    return false
   }
 
   get rules () {
     return {
-      name: 'required',
       email: 'required|email|unique:users',
       password: 'required'
     }

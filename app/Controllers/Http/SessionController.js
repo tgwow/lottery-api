@@ -2,10 +2,10 @@
 
 const errorMessages = (e) => {
   const messages = {
-    'PasswordMisMatchException': 'Invalid Password.',
+    'PasswordMisMatchException': 'Invalid Password!',
     'UserNotFoundException': 'This email does not exists.'
   }
-  return messages[e] || 'Something was wrong!'
+  return messages[e] || 'Sorry, something was wrong!'
 }
 
 class SessionController {
