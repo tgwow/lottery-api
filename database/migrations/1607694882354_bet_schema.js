@@ -8,6 +8,7 @@ class BetSchema extends Schema {
     this.create('bets', (table) => {
       table.increments()
       table.string('numbers').notNullable()
+      table.datetime('due_date', { useTz:false }).notNullable()
       table.integer('user_id')
         .unsigned()
         .references('id')

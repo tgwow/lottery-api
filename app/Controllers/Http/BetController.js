@@ -6,6 +6,7 @@
 
 const Bet = use('App/Models/Bet')
 const Database = use('Database')
+const moment = require('moment')
 /**
  * Resourceful controller for interacting with bets
  */
@@ -19,14 +20,14 @@ class BetController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async index ({ auth }) {
-    const id = auth.user.id
-    const bets = await Database.table('types')
-      .innerJoin('bets', 'types.id', 'bets.type_id')
-      .select('bets.id', 'numbers', 'name', 'price', 'bets.created_at as date', 'bets.user_id as user_id').where('user_id', id)
-
+  async index () {
+    const bets = await Bet.query().with('type').fetch()
     return bets
   }
+
+  // const bets = await Database.table('types')
+  // .innerJoin('bets', 'types.id', 'bets.type_id')
+  // .select('bets.id', 'bets.user_id as user_id', 'due_date', 'numbers', 'name', 'price').where('user_id', id)
 
   /**
    * Create/save a new bet.
@@ -66,9 +67,8 @@ class BetController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async show ({ params, request, response, view }) {
+  async show ({ params }) {
     const id = params.id
-
     const bets = await Bet
       .query()
       .where('user_id', id)
@@ -97,7 +97,9 @@ class BetController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async destroy ({ params, request, response }) {
+  async destroy ({ auth }) {
+    const id = auth.user.id;
+    await Bet.query().where('user_id', id).delete()
   }
 }
 

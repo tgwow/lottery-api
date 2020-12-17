@@ -4,6 +4,10 @@
 const Model = use('Model')
 
 class Bet extends Model {
+  static get dates () {
+    return super.dates.concat(['due_date'])
+  }
+
   user () {
     return this.belongsTo('App/Models/User')
   }

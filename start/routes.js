@@ -29,8 +29,11 @@ Route.group(() => {
 
   Route.resource('/bets', 'BetController')
     .apiOnly()
+    .only(['index', 'show', 'destroy', 'store'])
     .validator(new Map([
       [['bets.store'], ['Bet']]
     ]))
+  Route.get('users/tokens', 'UserController.show')
+
 }).middleware(['auth'])
 

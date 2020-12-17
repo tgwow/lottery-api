@@ -1,5 +1,7 @@
 'use strict'
 
+const Env = use('Env')
+const User = use('App/Models/User')
 const errorMessages = (e) => {
   const messages = {
     'PasswordMisMatchException': 'Invalid Password!',
@@ -14,7 +16,8 @@ class SessionController {
 
     try {
       const token = await auth.attempt(email, password)
-      return token
+      let user = await User.findByOrFail('email', email)
+      return {...token, expiresIn: Env.get('TOKEN_EXPIRES_IN'), userId: user.id}
     } catch (err) {
       const errorMessage = errorMessages(err.name)
       return response.status(err.status).send({ error: { message: errorMessage}})
@@ -24,8 +27,9 @@ class SessionController {
 
   async index ({ auth, response }) {
     try {
-      return await auth.check()
+      return await auth.getUser()
     } catch (error) {
+      console.log(error)
       response.status(404).send({ error: { message: 'Token has expired or is invalid' }})
     }
   }
