@@ -1,10 +1,11 @@
+# Lottery API
 
 <p align="center">
 	<img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">  
 </p>
 
 <h4 align="center"> 
-	🚧  Lottery-API ♻️ Concluído 🚀 🚧
+	🚧  Lottery API Concluído 🚀 🚧
 </h4>
 
 <p align="center">
@@ -19,7 +20,7 @@
 
 ## 💻 Sobre o projeto
 
-♻️ Lottery - API - é uma RESTful API que servirá e salvará dados para as aplicações web e mobile do The Greatest Lottery App.
+Lottery API - é uma RESTful API que servirá e salvará dados para as aplicações web e mobile do The Greatest Lottery App.
 
 
 Projeto desenvolvido durante o **Lab Luby** na [Luby Software](https://www.luby.com.br/) durante meu período de treinamento.
@@ -52,11 +53,6 @@ $ adonis route:list
 
 ## 🚀 Como executar o projeto
 
-Este projeto é divido em três partes:
-1. Backend (pasta server) 
-2. Frontend (pasta web)
-3. Mobile (pasta mobile)
-
 💡Tanto o Frontend quanto o Mobile precisam que o Backend esteja sendo executado para funcionar.
 
 ### Pré-requisitos
@@ -75,8 +71,16 @@ $ \password postgres
 $ create database lottery;
 \q para sair
 ```
-Instalando a CLI do adonis:
+
+#### 🎲 Rodando o Backend (servidor)
+
 ```bash
+# Instale a CLI do adonis:
+$ npm i -g @adonisjs/cli
+# Clone esse repositorio
+$ git clone https://github.com/tgwow/lottery-api.git
+$ cd lottery-api
+$ npm install 
 $ npm i -g @adonisjs/cli
 # Para criar nossas tabelas no banco de dados:
 $ adonis migration:run
@@ -86,32 +90,12 @@ $ adonis seed
 $ adonis key:generate
 # Execute a aplicação
 $ adonis serve --dev
+
+# O servidor inciará na porta:3333 - acesse http://localhost:3333 
 ```
 
 > Obs: A funcionalidade de envio de email precisa de algumas configurações extras, caso queira fazer funcionar, entre em contato que irei providenciar asim que possível.
 
-#### 🎲 Rodando o Backend (servidor)
-
-```bash
-
-# Clone este repositório
-$ git clone git@github.com:tgmarinho/README-ecoleta.git
-
-# Acesse a pasta do projeto no terminal/cmd
-$ cd README-ecoleta
-
-# Vá para a pasta server
-$ cd server
-
-# Instale as dependências
-$ npm install
-
-# Execute a aplicação em modo de desenvolvimento
-$ npm run dev:server
-
-# O servidor inciará na porta:3333 - acesse http://localhost:3333 
-
-```
 ---
 
 ## 🛠 Tecnologias
