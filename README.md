@@ -5,7 +5,7 @@
 </p>
 
 <h4 align="center"> 
-	🚧  Lottery API Concluído 🚀 🚧
+	🚧  Lottery API - Concluído 🚀 🚧
 </h4>
 
 <p align="center">
@@ -20,7 +20,7 @@
 
 ## 💻 Sobre o projeto
 
-Lottery API - é uma RESTful API que servirá e salvará dados para as aplicações web e mobile do The Greatest Lottery App.
+Esta é uma RESTful API que servirá e salvará dados para as aplicações web e mobile do The Greatest Lottery App.
 
 
 Projeto desenvolvido durante o **Lab Luby** na [Luby Software](https://www.luby.com.br/) durante meu período de treinamento.
@@ -81,7 +81,6 @@ $ npm i -g @adonisjs/cli
 $ git clone https://github.com/tgwow/lottery-api.git
 $ cd lottery-api
 $ npm install 
-$ npm i -g @adonisjs/cli
 # Para criar nossas tabelas no banco de dados:
 $ adonis migration:run
 # Para executar a seed e gerar valores default para a tabela type:
