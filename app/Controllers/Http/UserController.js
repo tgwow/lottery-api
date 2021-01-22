@@ -10,7 +10,7 @@ class UserController {
       const user = await User.create(data)
       try {
         const token = await auth.attempt(data.email, data.password)
-        return {...token, expiresIn: Env.get('TOKEN_EXPIRES_IN')}
+        return {...token, userId: user.id, expiresIn: Env.get('TOKEN_EXPIRES_IN')}
       } catch (err) {
         return response.status(err.status).send({ error: err })
       }
