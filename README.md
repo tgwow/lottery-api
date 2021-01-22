@@ -9,16 +9,17 @@
 </h4>
 
 <p align="center">
- <a href="#-sobre-o-projeto">Sobre</a> •
+ <a href="#-sobre">Sobre</a> •
  <a href="#-funcionalidades">Funcionalidades</a> •
- <a href="#-como-executar-o-projeto">Como executar</a> • 
+ <a href="#-instalação">Instalação</a> • 
  <a href="#-tecnologias">Tecnologias</a> • 
+ <a href="#-contribuindo">Contribuindo</a> • 
  <a href="#-autor">Autor</a> • 
  <a href="#user-content--licença">Licença</a>
 </p>
 
 
-## 💻 Sobre o projeto
+## 💻 Sobre
 
 Esta é uma RESTful API que servirá e salvará dados para as aplicações web e mobile do The Greatest Lottery App.
 
@@ -26,7 +27,6 @@ Esta é uma RESTful API que servirá e salvará dados para as aplicações web e
 Projeto desenvolvido durante o **Lab Luby** na [Luby Software](https://www.luby.com.br/) durante meu período de treinamento.
 Foi utilizado o framework [AdonisJS](https://adonisjs.com/), já que o mesmo oferece bastante ganho de produtividade por ter uma CLI interativa, bootstrap de vários arquivos de configuração e uma boa documentação bem organizada e com bastante exemplos.
 
----
 
 ## ⚙️ Funcionalidades
 
@@ -49,9 +49,8 @@ A API tem 3 principais entidades:
 # Para ver os endpoints da aplicação, execute:
 $ adonis route:list
 ```
----
 
-## 🚀 Como executar o projeto
+## 🚀 Instalação
 
 💡Tanto o Frontend quanto o Mobile precisam que o Backend esteja sendo executado para funcionar.
 
@@ -66,7 +65,8 @@ $ sudo apt install postgresql
 # Para alterar a senha:
 $ sudo -u postgres psql
 $ \password postgres
-# A senha escolhida deve ser colocada no arquivo .env na property DB_password, caso escolha a senha postgres nao precisar alterar o arquivo .env
+# A senha escolhida deve ser colocada no arquivo .env na property DB_password.
+# Caso escolha a senha postgres nao precisar alterar o arquivo .env
 # Para criar a database:
 $ create database lottery;
 \q para sair
@@ -95,7 +95,6 @@ $ adonis serve --dev
 
 > Obs: A funcionalidade de envio de email precisa de algumas configurações extras, caso queira fazer funcionar, entre em contato que irei providenciar asim que possível.
 
----
 
 ## 🛠 Tecnologias
 
@@ -109,9 +108,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 -   **[Postgresql](https://www.postgresql.org/)**
 -   **[Mailtrap](http://mailtrap.io/)**
 
----
 
-## 💪 Como contribuir para o projeto
+## 💪 Contribuindo
 
 1. Faça um **fork** do projeto.
 2. Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
@@ -119,7 +117,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 4. Envie as suas alterações: `git push origin my-feature`
 > Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](./CONTRIBUTING.md)
 
----
 
 ## 🦸 Autor
 
@@ -131,12 +128,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 [![Twitter Badge](https://img.shields.io/badge/-@theveloper_tg-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/theveloper_tg)](https://twitter.com/theveloper_tg) [![Linkedin Badge](https://img.shields.io/badge/-Thiago-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/thiago-oliveira-86758738/)](https://www.linkedin.com/in/thiago-oliveira-86758738/) 
 
----
 
 ## 📝 Licença
 
 Este projeto esta sobe a licença [MIT](./LICENSE).
 
 Feito com ❤️ por Thiago Oliveira 👋🏽 [Entre em contato!](https://www.linkedin.com/in/thiago-oliveira-86758738/)
-
----
