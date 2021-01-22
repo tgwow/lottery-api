@@ -58,7 +58,9 @@ $ adonis route:list
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) or [nvm](https://nodejs.org/en/download/package-manager/#nvm) this is a package manager to install/remove/switch differents versions of Node.js.
-Instalando o banco de dados:
+
+#### 🎲 Instalando o banco de dados:
+
 ```bash
 $ sudo apt update
 $ sudo apt install postgresql
@@ -93,7 +95,7 @@ $ adonis serve --dev
 # O servidor inciará na porta:3333 - acesse http://localhost:3333 
 ```
 
-> Obs: A funcionalidade de envio de email precisa de algumas configurações extras, caso queira fazer funcionar, entre em contato que irei providenciar asim que possível.
+> Obs: A funcionalidade de envio de email precisa de algumas configurações extras, caso queira fazer funcionar, entre em contato que irei providenciar assim que possível.
 
 
 ## 🛠 Tecnologias
